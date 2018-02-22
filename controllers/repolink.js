@@ -9,17 +9,16 @@ router.get('/', (req, res) => {
     })
 })
 router.get("/new", (req, res) => {
-    res.render("/post/new")
+    res.render("post/new")
 })
 router.post("/", (req, res) => {
     RepoLink.create({
         title: req.body.title,
         url: req.body.url,
-        description : req.body.description,
-        date : req.body.date,
-        comments: req.body.comments
+        description: req.body.description,
+        date: req.body.date
     }).then(repolink => {
-        res.redirect("/post")
+        res.redirect("/repolinks")
     })
 })
 router.get('/:id', (req, res) => {

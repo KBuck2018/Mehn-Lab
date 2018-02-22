@@ -5,7 +5,7 @@ const hbs = require('hbs')
 
 app.set('view engine', 'hbs')
 const repoController = require('./controllers/repolink')
-
+app.use(bodyParser.urlencoded({extended: true}));
 app.get('/', (req, res) => {
     res.render('index')
 })
