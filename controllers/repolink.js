@@ -24,7 +24,7 @@ router.post("/", (req, res) => {
 
 router.get('/edit/:id', (req, res) =>{
     RepoLink.findOne({ _id: req.params.id }).then(repolink => {
-        res.render('post/edit')
+        res.render('post/edit', repolink)
     })
 })
 
