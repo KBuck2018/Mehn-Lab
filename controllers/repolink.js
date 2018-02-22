@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
     })
 })
 
+<<<<<<< HEAD
 router.get("/new", (req, res) => {
     res.render("/post/new")
 })
@@ -24,5 +25,12 @@ router.post("/", (req, res) => {
         res.redirect("/post")
     })
 })
+=======
+router.get('/:id', (req, res) => {
+    RepoLink.findOne({ _id: req.params.id }).then(repolink => {
+      res.render('post/show', repolink)
+    })
+  })
+>>>>>>> 0fe270aa2b90130897aeb154a937e7a29b06cb6e
 
 module.exports = router
