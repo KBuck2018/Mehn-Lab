@@ -1,7 +1,8 @@
-<ul>
+<ol>
     {{#each repolinks}}
     <li>
         <a href="/repolinks/{{this.id}}">{{this.title}}</a>
+        <p>{{this.description}}</p>
     </li>
     {{/each}}
-</ul>
+</ol>
