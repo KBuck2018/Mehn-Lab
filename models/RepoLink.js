@@ -1,10 +1,19 @@
 const mongoose = require("../db/connection");
 
 const repoSchema = new mongoose.Schema({
-    title: String,
-    url: String,
+    title: {
+        type :String,
+        required: true
+    },
+    url: { 
+        type: String,
+        required: true
+    },
     description: String,
-    date: String,
+    date: {
+        type: String,
+        required: true
+    },
     comments: [String]
 })
 
