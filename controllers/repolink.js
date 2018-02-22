@@ -16,7 +16,8 @@ router.post("/", (req, res) => {
         title: req.body.title,
         url: req.body.url,
         description: req.body.description,
-        date: req.body.date
+        date: req.body.date,
+        comments: req.body.comments
     }).then(repolink => {
         res.redirect("/repolinks")
     })
@@ -37,6 +38,12 @@ router.get('/:id', (req, res) => {
 router.put('/:id', (req, res) => {
     RepoLink.findOneAndUpdate({ _id: req.params.id }, req.body).then(repolink => {
         res.redirect('/repolinks')
+    })
+})
+
+router.delete('/:id', (req, res) => {
+    RepoLink.findOneAndRemove({_id: req.params.id}).then(repolink => {
+        res.redirect("/repolinks");
     })
 })
 
