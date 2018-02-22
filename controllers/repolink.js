@@ -13,6 +13,7 @@ router.get("/new", (req, res) => {
     res.render("post/new")
 })
 router.post("/", (req, res) => {
+    if (req.body.title) {
     RepoLink.create({
         title: req.body.title,
         url: req.body.url,
@@ -21,6 +22,9 @@ router.post("/", (req, res) => {
     }).then(repolink => {
         res.redirect("/repolinks")
     })
+} else {
+    res.render('post/error')
+}
 })
 
 router.get('/edit/:id', (req, res) =>{
