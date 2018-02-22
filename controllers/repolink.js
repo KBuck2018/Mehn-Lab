@@ -21,9 +21,23 @@ router.post("/", (req, res) => {
         res.redirect("/repolinks")
     })
 })
+
+router.get('/edit/:id', (req, res) =>{
+    RepoLink.findOne({ _id: req.params.id }).then(repolink => {
+        res.render('post/edit')
+    })
+})
+
 router.get('/:id', (req, res) => {
     RepoLink.findOne({ _id: req.params.id }).then(repolink => {
       res.render('post/show', repolink)
     })
   })
+
+router.put('/:id', (req, res) => {
+    RepoLink.findOneAndUpdate({ _id: req.params.id }, req.body).then(repolink => {
+        res.redirect('/repolinks')
+    })
+})
+
 module.exports = router
