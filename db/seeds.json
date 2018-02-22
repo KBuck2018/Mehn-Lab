@@ -1,0 +1,24 @@
+[
+    {
+        "title": "Johns Website",
+        "url": "www.john.com",
+        "description": "Johns hacking tricks",
+        "date": "January 13, 2017",
+        "comments": [
+            "So awesome",
+            "Much Wow",
+            "Worst hack ever"
+        ]
+    },
+    {
+        "title": "Tims Website",
+        "url": "www.timmah.com",
+        "description": "Tims bad hacks",
+        "date": "June 13, 1986",
+        "comments": [
+            "Oldest tricks in the book",
+            "Not even relevant",
+            "I love it"
+        ]
+    }
+]
