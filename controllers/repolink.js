@@ -9,4 +9,20 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get("/new", (req, res) => {
+    res.render("/post/new")
+})
+
+router.post("/", (req, res) => {
+    RepoLink.create({
+        title: req.body.title,
+        url: req.body.url,
+        description : req.body.description,
+        date : req.body.date,
+        comments: req.body.comments
+    }).then(repolink => {
+        res.redirect("/post")
+    })
+})
+
 module.exports = router
