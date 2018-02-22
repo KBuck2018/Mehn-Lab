@@ -9,4 +9,10 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/:id', (req, res) => {
+    RepoLink.findOne({ _id: req.params.id }).then(repolink => {
+      res.render('post/show', repolink)
+    })
+  })
+
 module.exports = router
