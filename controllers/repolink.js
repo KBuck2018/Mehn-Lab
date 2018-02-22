@@ -8,11 +8,9 @@ router.get('/', (req, res) => {
       res.render('post/index', {repolinks})
     })
 })
-
 router.get("/new", (req, res) => {
     res.render("/post/new")
 })
-
 router.post("/", (req, res) => {
     RepoLink.create({
         title: req.body.title,
@@ -24,11 +22,9 @@ router.post("/", (req, res) => {
         res.redirect("/post")
     })
 })
-
 router.get('/:id', (req, res) => {
     RepoLink.findOne({ _id: req.params.id }).then(repolink => {
       res.render('post/show', repolink)
     })
   })
-
 module.exports = router
