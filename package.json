@@ -1,0 +1,26 @@
+{
+  "name": "Mehn-Lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KBuck2018/Mehn-Lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KBuck2018/Mehn-Lab/issues"
+  },
+  "homepage": "https://github.com/KBuck2018/Mehn-Lab#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "hbs": "^4.0.1",
+    "method-override": "^2.3.10"
+  }
+}
