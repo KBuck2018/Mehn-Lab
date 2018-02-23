@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 router.get("/new", (req, res) => {
     res.render("post/new")
 })
-router.post("/", (req, res) => {
+router.post("/", (req, res, err) => {
     RepoLink.create({
         title: req.body.title,
         url: req.body.url,

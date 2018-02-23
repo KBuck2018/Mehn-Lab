@@ -2,7 +2,7 @@ const mongoose = require("../db/connection");
 
 const repoSchema = new mongoose.Schema({
     title: {
-        type :String,
+        type: String,
         required: true
     },
     url: { 
