@@ -10,14 +10,14 @@ router.get('/', (req, res) => {
 
 // GET /signup
 router.get('/signup', (req, res) => {
-    res.render('signup', {message: req.flash("signupMessage")})
+    res.render('userViews/signup', {message: req.flash("signupMessage")})
   })
   
   // POST /signup
   router.post('/signup', (req, res) => {
     var signupStrategy = passport.authenticate('local-signup', {
       successRedirect : '/',
-      failureRedirect : '/signup',
+      failureRedirect : 'userViews/signup',
       failureFlash : true
     });
   
@@ -26,14 +26,14 @@ router.get('/signup', (req, res) => {
   
   // GET /login
   router.get('/login', (req, res) => {
-    res.render('login', { message: req.flash('loginMessage') })
+    res.render('userViews/login', { message: req.flash('loginMessage') })
   })
 
   // POST /login
 router.post('/login', (req, res) => {
     var loginProperty = passport.authenticate('local-login', {
       successRedirect : '/',
-      failureRedirect : '/login',
+      failureRedirect : 'userViews/login',
       failureFlash : true
     });
   

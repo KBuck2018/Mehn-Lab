@@ -26,7 +26,7 @@ app.use(function (req, res, next) {
     res.locals.currentUser = req.user
     next()
 })
-app.use(session({secret: 'WDI-GENERAL-ASSEMBLY-EXPRESS'}))
+app.use(session({secret: 'secret'}))
 
 app.use(methodOverride("_method"));
 app.use('/repolinks', repoController)
