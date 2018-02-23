@@ -26,10 +26,11 @@ app.use(function (req, res, next) {
     res.locals.currentUser = req.user
     next()
 })
+app.use(session({secret: 'WDI-GENERAL-ASSEMBLY-EXPRESS'}))
 
 app.use(methodOverride("_method"));
 app.use('/repolinks', repoController)
-app.use('/repolinks', userController)
+app.use('/user', userController)
 
 app.listen(4000, () => {
     console.log('server running')

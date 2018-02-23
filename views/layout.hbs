@@ -28,7 +28,12 @@
             <a href="repolinks/new">New Post</a>
             <a href="/">Home</a>
             <a href="repolinks">Repos</a>
-
+            {{#if currentUser}}
+              <li><a href="/logout">Logout {{currentUser.local.email}}</a></li>
+              {{else}}
+              <li><a href="/user/login">Login</a></li>
+              <li><a href="/user/signup">Signup</a></li>
+              {{/if}}         
         </nav>
 
     </header>

@@ -4,6 +4,10 @@ const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const passport = require('passport')
 
+router.get('/', (req, res) => {
+  res.render('index')
+})
+
 // GET /signup
 router.get('/signup', (req, res) => {
     res.render('signup', {message: req.flash("signupMessage")})
