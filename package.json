@@ -20,6 +20,10 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "connect-flash": "^0.1.1",
+<<<<<<< HEAD
+=======
+    "cookie-parser": "^1.4.3",
+>>>>>>> 0e4eb73c99b09dd8e2e853c2fd1f31bab284006d
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "hbs": "^4.0.1",
