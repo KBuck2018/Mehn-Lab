@@ -16,8 +16,8 @@ router.get('/signup', (req, res) => {
   // POST /signup
   router.post('/signup', (req, res) => {
     var signupStrategy = passport.authenticate('local-signup', {
-      successRedirect : '/',
-      failureRedirect : 'userViews/signup',
+      successRedirect : '/repolinks',
+      failureRedirect : '/user/signup',
       failureFlash : true
     });
   
@@ -32,8 +32,8 @@ router.get('/signup', (req, res) => {
   // POST /login
 router.post('/login', (req, res) => {
     var loginProperty = passport.authenticate('local-login', {
-      successRedirect : '/',
-      failureRedirect : 'userViews/login',
+      successRedirect : '../repolinks',
+      failureRedirect : '/user/login',
       failureFlash : true
     });
   

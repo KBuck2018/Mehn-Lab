@@ -44,5 +44,10 @@ router.put('/:id', (req, res) => {
         res.redirect('/repolinks')
     })
 })
+router.delete('/:id', (req, res) => {
+        RepoLink.findOneAndRemove({_id: req.params.id}).then(repolink => {
+            res.redirect("/repolinks");
+    })
+})
 
 module.exports = router
