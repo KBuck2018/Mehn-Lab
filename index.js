@@ -34,7 +34,6 @@ app.use(session({ secret: "secret" }));
 
 app.use(methodOverride("_method"));
 app.use("/repolinks", repoController);
-app.use("/user", userController);
 
 app.set("port", process.env.PORT || 3001);
 
