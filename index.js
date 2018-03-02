@@ -21,17 +21,6 @@ app.get("/", (req, res) => {
 app.use(cookieParser());
 app.use(bodyParser());
 
-require("./config/passport")(passport);
-app.use(passport.initialize());
-app.use(passport.session());
-app.use(flash());
-
-app.use(function(req, res, next) {
-  res.locals.currentUser = req.user;
-  next();
-});
-app.use(session({ secret: "secret" }));
-
 app.use(methodOverride("_method"));
 app.use("/repolinks", repoController);
 
