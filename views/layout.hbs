@@ -28,12 +28,13 @@
             <a href="repolinks/new">New Post</a>
             <a href="/">Home</a>
             <a href="repolinks">Repos</a>
+            <p>{{User.local.userName}}</p>
             {{#if currentUser}}
-              <li><a href="/logout">Logout {{currentUser.local.userName}}</a></li>
-              {{else}}
-              <li><a href="/user/login">Login</a></li>
-              <li><a href="/user/signup">Signup</a></li>
-              {{/if}}         
+              <a href="/user/logout">Logout {{User.local.userName}}</a>
+            {{else}}
+              <a href="/user/login">Login</a>
+              <a href="/user/signup">Signup</a>
+            {{/if}}         
         </nav>
 
     </header>

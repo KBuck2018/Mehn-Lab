@@ -1,10 +1,10 @@
-var mongoose = require("../db/connection");
+var mongoose = require("../db/userConnection");
 var bcrypt = require("bcrypt-nodejs");
 
 var User = mongoose.Schema({
     local : {
         userName    : String,
-        password    : String,
+        password    : String
     }
 });
 
